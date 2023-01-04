@@ -115,7 +115,7 @@ caption{
 
 footer{
     background-color: #000;
-    height: 5vh;
+    height: 7vh;
     margin-top: 0px;
     color: white;
     padding: 10px;
@@ -505,7 +505,7 @@ table tr:nth-child(even){
 @media screen and (min-width:700px){
     #financialStatement__table{
         width:60%;
-        
+         
         margin: auto;
         margin-bottom: 10vh;
         border-collapse: collapse;
