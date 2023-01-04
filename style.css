@@ -1,0 +1,523 @@
+:root{
+    --pageHeader-fsize:12vw;
+    --secondaryHeaderColor:rgb(101, 181, 255);
+    --primaryHeaderColor:gold;
+}
+
+body {
+    padding-top:40%;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vw; 
+    margin: 0;     
+}
+
+/*MEDIA QUERY FOR BODY*/
+
+@media screen and (min-width:359px){
+    body{
+        padding-top: 50%;
+    }
+}
+
+@media screen and (min-width:430px){
+    body{
+        padding-top: 30%;
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width:600px){
+    body{
+        padding-top: 0;
+    }
+}
+
+@media screen and (min-width:700px){
+    body{
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (min-width:1029px){
+    body{
+        font-size: 2vw;
+    }
+}
+
+/*STYLING FOR SHARED TAGS*/
+
+ul{
+    list-style-type: none;    
+}
+
+a{
+    text-decoration: none;
+}   
+
+h1{
+    font-family: 'Lato', sans-serif;
+    font-size:var(--pageHeader-fsize);  
+}
+
+h1 span{
+    color: red;
+}
+
+h2, h3{
+    margin-bottom: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4vw;
+    color: var(--secondaryHeaderColor);
+}
+
+@media screen and (min-width:1030px){
+    h2, h3{
+        font-size: 2.5vw;
+    }
+    h2{
+        text-align: center;
+    }
+}
+
+h5{
+    margin: 20px 0 0 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p{
+    margin: 0;
+    text-align: justify;
+}
+
+strong{
+    color:rgb(149, 130, 21); 
+    font-size: 4vw;
+}
+
+strong:hover{
+    color: red;
+    cursor: pointer;
+}
+
+@media screen and (min-width:1000px){
+    strong{
+        font-size: 2.5vw;
+    }
+}
+
+caption{
+    font-weight: bold;
+}
+
+.hidden{
+    display: none;
+}
+
+footer{
+    background-color: #000;
+    height: 5vh;
+    margin-top: 0px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p{
+    text-align: center;
+}
+
+/*STYLING FOR HEADER*/
+header{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+}
+
+.header__container{
+    position: relative;
+    background-color: orange;
+    text-align:center;
+    width: inherit;
+    height: 100%; 
+}
+
+#newsletter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#issue{ 
+    background-color: #000; 
+    margin: 0;
+    width: 42vw;
+    border-radius: 4px;
+    padding: 4px;  
+    color: white; 
+    font-size: 2vh; 
+} 
+
+#issue-hidden{
+    display: none;
+}
+
+.hide-nav{
+    display: none;
+}
+#hide-nav-list{
+    display: flex;
+}
+
+/*MEDIA QUERY FOR HEADER*/
+
+@media screen and (min-width:359px){
+    header{
+        height: 18vh;
+    }
+
+    #newsletter{
+        top: 40%;
+    }
+
+    #issue{
+        display: none;
+    }
+
+    #issue-hidden{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: red;
+        width: 50vw;
+        height: 3vh;
+        border-radius: 4px;
+        padding: 4px;  
+        color: gold;  
+        text-align: center;
+    } 
+
+    #issue-hidden h6{
+        font-size: 3vw;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width:600px){
+    header{
+        position: relative;
+        height: 20vh;
+        margin-bottom: 10vh;
+    }
+
+    .header__container{
+        background-color: white;
+        color: orange;
+    }
+
+    #newsletter{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    h1{
+        font-size: 8vw;
+    }
+
+    #issue-hidden{ 
+        top: 100%;
+        width: 50vw;
+        height: 5vh;
+        font-size: 3vh; 
+    } 
+}
+
+@media screen and (min-width:1030px){
+    header{
+        height: 30vh;
+    }
+
+    #issue-hidden{ 
+        top: 100%;
+        font-size: 5vh; 
+    } 
+}
+
+
+/*STYLING FOR NAV*/
+nav{
+    position: fixed;
+    z-index: 1;
+    background-image: linear-gradient(#f1f1f1, white);
+    height: 50%;
+    width: 42%;        
+}
+
+#nav__list, .nav__list{
+    padding: 0;
+}
+
+.nav__list-item--link, #profile__list, #archive__list{
+    display: block;
+    padding: 8px;   
+}
+
+.nav__list-item--link:hover, #profile__list:hover, #archive__list:hover{
+    cursor: pointer;
+    color: red;
+}
+
+.profile__list-item, .archive__list-item{
+    display: none;
+    padding-left: 0px;
+    background-color: aquamarine;
+    border-radius: 4px;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    width: 45vw;    
+}
+.profile__list-item{
+    height: 33vh;
+}
+.archive__list-item{
+    height: 8vh;
+}
+
+#profile__list:hover .profile__list-item{
+    display: block;
+}
+
+.profile__list-item--item, .archive__list-item--item{
+    padding: 5px 0px;
+    margin-left: 0px;
+    display: block;
+    text-align: center;
+    
+}
+
+.profile__list-item--item a:hover, .archive__list-item a:hover{
+    color: orange;
+}
+
+#archive__list:hover .archive__list-item{
+    display: block;
+}
+
+.archive__list-item li{
+    padding: 4px;
+}
+
+/*MEDIA QUERY FOR NAV*/
+
+@media screen and (min-width:359px){
+    nav{
+        margin-top: 0vh;
+        position: fixed;
+        height: 7%;
+        width: 100%;    
+    }
+
+    .nav__list{
+        padding-left: 0;
+    }
+
+    #nav-alt{
+        display: none;
+    }
+
+    .hide-nav{
+        display: block;
+    }
+    #profile__list-item{
+        height: 35vh;
+    }
+    #profile__list-item{
+        height: 35vh;
+    }
+}
+
+@media screen and (min-width:600px){
+    nav{
+        margin-top: 0vh;
+        position: relative;
+        height: 5%;
+        width: 100%;    
+    }
+}
+
+@media screen and (min-width:700px){
+    nav{
+        height: 30%;
+    }
+}
+
+@media screen and (min-width:1029px){
+    nav{
+        height: 35%;
+    }
+}
+
+/*STYLING FOR letterContent*/
+#letterContent{
+    position: relative;
+    margin-left: 45%;
+    padding-right: 7px;
+    width: 50%;
+}
+
+#letterContent__hero p::first-letter{
+    font-size: 15vw;
+    font-family: 'Satisfy', cursive;
+}
+
+article{
+    width: 100%;
+    
+}
+
+#factsImg{
+    width: 100%;
+    margin: auto;
+}
+
+#factsImg__container{
+    width: 100%;
+    margin: auto;
+}
+
+#factsImg__container img{
+    display: block;
+    margin: 0 auto 0 auto;
+    width: 100%;
+}
+
+article h2{
+    text-decoration: underline double;
+}
+
+article .no-underline{
+    margin-bottom: 1vh;
+    text-decoration: none;
+    text-align: center;
+    font-size: 5.5vw;
+}
+
+article p{
+    margin-bottom:20px
+}
+
+.article__img-container{
+    position: relative;
+    background-color: rgb(255, 0, 0, 0.5);
+    width: 100%;
+    height: 40vh;
+    margin: auto;
+    margin-bottom: 20px;       
+}
+
+.article__img-container:hover{
+    background-color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+.article__img-container div{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: inherit;
+    width: inherit;
+}
+
+.article__img-container div p{
+    margin-top: -60px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.article__img{
+    width: 100%;
+    height: inherit; 
+    border-radius: 100px;
+    margin-bottom: 2vh;
+}
+
+#financialStatement__table{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    width:100%;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(odd){
+    background-color: rgb(101, 181, 255);
+}
+
+table tr:nth-child(even){
+    background-color: rgb(247, 172, 31);
+}  
+
+/*MEDIA QUERY FOR letterContent*/
+
+@media screen and (min-width:359px){
+    #letterContent{
+        margin-left: 0;
+        padding: 10px;
+        width: 80%;
+        margin: auto;    
+    }
+
+    .article__img-container{
+        height: 50vh;
+        width: 80% ;       
+    }
+
+
+}
+
+@media screen and (min-width:600px){
+    #flexImage{
+        display: flex;
+    }
+
+    .article__img-container{
+        height: 30vh;
+    }
+
+    .article__img-container div p{
+        font-size: 15px;
+        color: #fff;
+    }
+}
+
+@media screen and (min-width:700px){
+    #financialStatement__table{
+        width:60%;
+        
+        margin: auto;
+        margin-bottom: 10vh;
+        border-collapse: collapse;
+    }
+}
+
+@media screen and (min-width:1029px){
+    .article__img-container{
+        height: 40vh;
+    }
+
+    .article__img-container div p{
+        font-size: 20px;
+    }
+}
