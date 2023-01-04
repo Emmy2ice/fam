@@ -1,0 +1,158 @@
+/*STYLING FOR BODY*/
+#xmas-body{
+    padding-top: 60%;
+}
+
+/* MEDIA QUERY FOR BODY */
+
+@media screen and (min-width:359px){
+    #xmas-body{
+        padding-top: 70%;
+    }
+}
+@media screen and (min-width:430px){
+    #xmas-body{
+        padding-top: 45%;
+        font-size: 3vw;
+    }
+}
+@media screen and (min-width:500px){
+    #xmas-body{
+        padding-top: 30%;
+    }
+}
+@media screen and (min-width:600px){
+    #xmas-body{
+        padding-top: 0;
+    }
+}
+
+@media screen and (min-width:700px){
+    #xmas-body{
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (min-width:1029px){
+    #xmas-body{
+        font-size: 2vw;
+    }
+}
+
+/* STYLING FOR HEADER */
+#xmasHeader{
+    margin-bottom: 0;
+    height: 20vh;
+}
+
+#header__flex-container{
+    display: flex;
+    height: 100%;
+}
+
+#header__container-christmasTree{ 
+    width: 25vw;
+    height: inherit;
+}
+
+#christmasTree{
+    width: inherit;
+    height: inherit;
+}
+
+#xmas-header__container{
+    position: relative;
+    width: 75vw;
+    background-color: white;
+}
+
+#xmas-header__container div{ 
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#xmas-header{
+    font-size: 4vw;
+}
+
+#xmasProfile__list-item{
+    height: 40vh;
+}
+#xmasArchive__list-item{
+    height: 4vh;
+}
+
+/* MEDIA QUERY FOR HEADER */
+@media screen and (min-width: 359px){
+    #xmasHeader{
+        height: 25vh;
+    }
+    #xmas-header__container{
+        position: relative;   
+    }
+    #xmasNav{
+        height: 10vh;
+    }
+    #xmasNav__list{
+        display: flex;    
+    }
+}
+
+@media screen and (min-width:500px){
+    #xmasHeader{
+        height: 20vh;
+        margin-bottom: 10vh;
+    }
+
+    #xmas-header__container div{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #issue-hidden{ 
+        top: 80%;
+    } 
+    #xmasNav{
+        height: 7vh;
+        background-image: none;
+        background-color: aquamarine;
+    }
+    #xmasNav__list{
+        margin-top: 0;
+    }
+    #xmas-header__container{
+        background-color: white;
+    }
+}
+
+@media screen and (min-width:600px){
+    #issue-hidden{ 
+        top: 65%;
+    } 
+}
+
+@media screen and (min-width:700px){
+    #xmasHeader{
+        height: 30vh;
+    }
+    #xmas-header__container div{
+        top: 40%;
+    }
+    #xmas-header__container div #issue-hidden{
+        top: 70%;
+    }
+}
+
+@media screen and (min-width:1029px){
+    #xmasHeader{
+        height: 40vh;
+    }
+    #xmas-header__container{
+        background-color: white;
+    }
+}

@@ -1,0 +1,133 @@
+#profile__body{
+    margin: 0;
+    padding-left: 0;
+    background-color: orange;
+    padding-top: 102%;
+}
+
+@media screen and (min-width:280px){
+    #profile__body{
+        padding-top:135%
+    }
+}
+
+#profile__header-container{
+    width: 100%;
+    height: 20vh;
+    background-color: orange;
+    position: relative;     
+}
+
+#profile__header-container div{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#profile__header h1{
+    font-size: 5vw;
+}
+
+#profile__container{
+    background-color: white;
+    width: 100%;
+    height: 40vh;
+}
+
+#profileImg__container{
+    position: relative;
+    width: 100%;
+    height: inherit;   
+}
+
+.profileImg__container-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border-radius: 4px;
+}
+
+.profileImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+#ginaImg-container, #nmaImg-container, #momImg-container{
+    background-color: black;
+}
+
+#emmyImg-container{
+    background-color: rgb(101, 181, 255);
+}
+
+#dadImg-container{
+    background-color: orange;
+}
+
+#dadImg{
+    width: 70%;
+}
+
+#sisImg{
+    width: 45%;
+}
+
+#ngImg-container{
+    background-color: silver;
+}
+
+#leslieImg-container{
+    background-color: orange;
+}
+
+#austinImg-container{
+    background-color: red;
+}
+
+#details{
+    margin-top: 20px;
+}
+
+#details__table{
+    margin-top: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#details__table tr{
+    height: 30px;
+    text-align: center;
+    font-size: 3vw;
+}
+
+#details__table th{
+    width: 50%;
+    padding-left: 10px;
+    text-align: left;
+}
+
+#profileFooter{
+    padding: 10px;
+    text-align: center;
+}
+
+#profileFooter a{
+    color: white;
+    font-size: 2vh;
+    cursor: pointer;
+}
+
+#profileFooter a:hover{
+    color: gold;
+}
+
