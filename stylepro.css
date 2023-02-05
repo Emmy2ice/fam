@@ -146,7 +146,7 @@ font-size: 15vw;
 font-family: 'Satisfy', cursive;
 }
 .mainImg{
-height: 150vh;
+height: 100vh;
 margin: auto;
 }
 .mainImg__container{
@@ -363,9 +363,7 @@ footer p{
         margin-top: 15vh;
         font-size: 2vw;
     }  
-    .family{
-        height: 60vh;
-    }
+    
 }
 @media screen and (min-width:1029px){
     #content{
