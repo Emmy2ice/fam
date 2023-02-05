@@ -1,44 +1,65 @@
-#profile__body{
+:root{
+    --primary-color: #223c50;
+}
+body{
+    background-color: var(--primary-color);
     margin: 0;
-    padding-left: 0;
-    background-color: orange;
-    padding-top: 102%;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
 }
-
-@media screen and (min-width:280px){
-    #profile__body{
-        padding-top:135%
-    }
+h1{
+    font-size: 5vw;
 }
-
-#profile__header-container{
-    width: 100%;
+a{
+    text-decoration: none;
+}
+#content{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(10px, auto);
+    grid-template-areas: 
+    "profile profile profile profile profile"
+    "section section section section section";
+}
+#profile__container{
+    grid-area: profile;
+    position: fixed;
+    top: 10%;
+}
+section{
+    grid-area:section;
+}
+header{
+    z-index: 1;
+    position: fixed;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, 0%);
     height: 20vh;
-    background-color: orange;
-    position: relative;     
+    width: 100vw; 
 }
-
-#profile__header-container div{
+#header-container{
+    position: relative;
+    background-color: var(--primary-color);
+    height: 10vh;
+    width: 100%;
+    color: white;  
+}
+#header-container div{
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-
-#profile__header h1{
-    font-size: 5vw;
-}
-
 #profile__container{
-    background-color: white;
+    height: 60vh;
     width: 100%;
-    height: 40vh;
 }
-
 #profileImg__container{
     position: relative;
-    width: 100%;
-    height: inherit;   
+    background-color: var(--primary-color);  
+    height: inherit; 
+    width: 100%;  
 }
 
 .profileImg__container-container{
@@ -46,88 +67,170 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
     height: 80%;
+    width: 80%;
     border-radius: 4px;
 }
-
 .profileImg{
     display: block;
+    object-fit: cover;
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%;
     height: 100%;
+    width: 80%;
     border: 1px solid #ddd;
     border-radius: 4px;
-    object-fit: cover;
 }
-
+section{
+    margin-top: 68vh;
+}
 #ginaImg-container, #nmaImg-container, #momImg-container{
     background-color: black;
 }
-
 #emmyImg-container{
     background-color: rgb(101, 181, 255);
 }
-
 #dadImg-container{
     background-color: orange;
 }
-
-#dadImg{
+#dadImg, #austinImg{
     width: 70%;
 }
-
 #sisImg{
     width: 45%;
 }
-
 #ngImg-container{
     background-color: silver;
 }
-
 #leslieImg-container{
     background-color: orange;
 }
-
 #austinImg-container{
     background-color: red;
 }
-
-#details{
-    margin-top: 20px;
-}
-
-#details__table{
+table{
     margin-top: 0;
     border-collapse: collapse;
     width: 100%;
 }
-
-#details__table tr{
+tr{
     height: 30px;
     text-align: center;
     font-size: 3vw;
 }
+table tr:nth-child(odd){
+    background-color: rgb(101, 181, 255);
+}
 
-#details__table th{
+table tr:nth-child(even){
+    background-color: rgb(247, 172, 31);
+} 
+th{
     width: 50%;
     padding-left: 10px;
     text-align: left;
 }
-
-#profileFooter{
-    padding: 10px;
-    text-align: center;
+footer p{
+    margin: 0;
 }
-
-#profileFooter a{
+footer{
+    background-color: var(--primary-color);
+    margin-top: 0px;
+    box-sizing: border-box;
+    padding: 10px;
     color: white;
-    font-size: 2vh;
+    text-align: center; 
+}
+footer a{
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 4px;
+    color: white;
+    font-size: 4vw;
     cursor: pointer;
 }
-
-#profileFooter a:hover{
+footer a:hover{
     color: gold;
+} 
+@media screen and (min-width:400px){
+    #content{
+        grid-template-areas: 
+        "profile profile section section section"
+        ". . section section section";
+    }
+    #profile__container{
+        height: 50vh;
+        width: 40%;
+    }
+    #dadImg, #austinImg{
+        width: 100%;
+    }
+    .profileImg__container-container{
+        left: 8%;
+        transform: translate(0%, -50%);
+    }
+    #profileImg__container{
+        background-color: #5ca2b2;
+    }
+    .profileImg{
+        width: 100%;
+    }
+    section{
+        margin-top: 10vh;
+    }
+    tr{
+        font-size: 2.5vw;
+    }
+    
+    footer{
+        margin-top: 10vh;
+    }
 }
-
+@media screen and (min-width:500px){
+    tr{
+        font-size: 2vw;
+    }
+    footer a{
+        font-size: 2.5vw;
+    }
+}
+@media screen and (min-width:600px){
+    h1{
+        font-size: 3vw;
+    }
+    #content{
+        grid-gap: 10vw;
+    }
+    #profile__container{
+        height: 70vh;
+        width: 30%;
+        margin-left: 5vw;
+        margin-top: 10vh;
+    }
+    table{
+        width: 80%;
+    }
+    tr{
+        font-size: 1.5vw
+    }
+    footer a{
+        font-size: 2vw;
+    }
+}   
+@media screen and (min-width:850px){
+    tr{
+        font-size: 1.2vw
+    }
+}   
+@media screen and (min-width:1029px){
+    #profile__container{
+        margin-left: 10vw;
+        width: 20%;
+    }
+    tr{
+        font-size: 1.1vw
+    }
+    footer a{
+        font-size: 1.5vw;
+    }
+}     
