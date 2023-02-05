@@ -134,7 +134,7 @@ nav{
     line-height: 1.5;
     color: var(--primary-color);
     font-family: 'Nanum Gothic', sans-serif;
-    font-weight: 100;
+    font-weight: bolder;
 }
 #content > *{
     overflow: auto;
