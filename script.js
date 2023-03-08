@@ -1,1 +1,3 @@
-alert("WHAT'S NEW? You can now view the newsletter on larger screens, like PCs and desktops! Press 'OK' to continue");
+document.querySelector('.hamburger-menu').addEventListener('click', () => {
+    document.querySelector('.navigation').classList.toggle('change')
+});
