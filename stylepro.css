@@ -120,8 +120,7 @@ nav{
     flex-direction: column;
     list-style: none;
     height: 0vh;
-    width: 0;
-    transition: height .5s;
+    transition: all .5s;
     background-color: var(--primary-color);
     padding-left: 10px;
     padding-top: 10vh;
@@ -242,6 +241,7 @@ section{
     margin-top: 5vh;
     margin-bottom: 5vh;
     border-collapse: collapse;
+    color: red;
 }
 table tr:nth-child(odd){
     background-color: rgb(101, 181, 255);
