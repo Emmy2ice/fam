@@ -322,6 +322,9 @@ footer p{
     #content{
         font-size: 4vw;
     }
+    #content p {
+        line-height: 6vh;
+    }
 }
 
 @media screen and (min-width:500px){
