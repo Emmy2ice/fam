@@ -1,9 +1,9 @@
 :root{
     --primary-color: #223c50;
     --primary-font-family: 'Port Lligat Slab', serif;
-    --primary-font-size: 5vw;
+    --primary-font-size: 6vw;
     --secondary-font-family: 'Barlow', sans-serif;
-    --secondary-font-size: 4vw;
+    --secondary-font-size: 5vw;
 }
 body {
     margin: 0; 
