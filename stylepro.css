@@ -69,6 +69,18 @@ header{
     font-weight: bold;
     color: yellow;
 }
+.desktop-navigation{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    margin-top: 3vh;
+    height: 18vh;
+    color: #fff;
+    font-size: 3vw;
+    display: none;
+    /* background-color: rgb(186, 133, 35); */
+}
 .hamburger-menu{
     position: fixed;
     top: 1vh;
@@ -88,6 +100,7 @@ header{
 }
 .change .hamburger-menu{
     top: 10vh;
+    right: 10px;
 }
 .line{
     height: 2px;
@@ -179,17 +192,26 @@ header{
     list-style-type: none;
 }
 .reveal .profile-list{
-    height: 40vh;
+    height: auto;
     opacity: 1;
     margin-left: 5vw;
 }
+#holla{
+    height: 2vh;
+    width: auto;
+    background-color: red;
+    color: white;
+}
 .show .archive-list{
-    height: 40vh;
+    height: auto;
     opacity: 1;
     margin-left: 5vw;
 }
 .profile-list-item, .archive-list-item{
     margin-bottom: 2vh;
+}
+.desk-navigation{
+    display: none;
 }
 .nav-link{
     color: gold;
@@ -303,10 +325,17 @@ footer p{
 }
 
 @media screen and (min-width:500px){
+    body{
+        padding-top: 0;
+    }
     h1{
         font-size: 4.2vw;
+        width: auto;
+        margin: auto;
+        padding-left: 0;
     }
     h2{
+        margin-top: 1vh;
         font-size: 3vw;
     }
     h3{
@@ -314,38 +343,98 @@ footer p{
         background-color: var(--primary-color);
         color: #fff;
     }
-    h4{
-        top: 20%;
-        font-size: 2.2vw;
-    }
     header{
-        height: 9vh;
+        position: static;
+        left: 0%;
+        transform: translate(0%, 0%);
+        width: 100%; 
+        margin-top: 0;
     }
     #header-container{
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-areas:
-        "header header header header header nav nav nav";
-        background-image: none;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
         background-color: var(--primary-color);
-    }
-    .issue-container{
-        width: 32vw;
     }
     #page-heading{
         display: flex;
-        justify-content: left;
+        justify-content: center;
         align-items: center;
         min-height: 100%;  
     }
-    .list__item{
-        margin-top: 9vh;
-        font-size: 2.2vw;
+    .flex-container{
+        margin-right: 0;
     }
-    .list__item-list{
-        width: 15vw;
+    .navigation{
+        display: none;
     }
-    .list__item-list-item{
-        font-size: 2.5vw;
+    .desktop-navigation{
+        display: block;
+    }
+    .wrapper{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .desktop-nav-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10vw;
+        background-color: var(--primary-color);
+        height: 10vh;
+    }
+    .desktop-nav-header h1{
+        font-size: 3vw;
+        margin: 0;
+        padding:1vw ;
+        cursor: pointer;
+    }
+    .desktop-nav-list{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10vw;
+       margin-top: 1vh;
+    }
+    .change .profiles{
+        color: gold;
+    }
+    .reveal .archive{
+        color: gold;
+    }
+    .desktop-profile-list, .desktop-archive-list{
+        display: none;
+        font-size: 2vw;
+        border-radius: 4px;
+    }
+    .change .desktop-profile-list{
+        display: flex;
+        flex-direction: column;
+    }
+    .reveal .desktop-archive-list{
+        display: flex;
+        flex-direction: column;
+    }
+    .desktop-nav-list ul{
+        padding: 10px;
+        list-style-type: none;
+    }
+    .desktop-profile-list{
+        width: auto;
+        margin-top: 0;
+        margin-left: -20vw;
+        background-color: var(--primary-color);
+       
+    }
+    .desktop-archive-list{
+        background-color: var(--primary-color);
+        margin-right: -30vw;
+        margin-top: 0;
+     
     }
     #content{
         grid-template-columns: repeat(5, 1fr);
@@ -357,7 +446,7 @@ footer p{
         ". . main main main"
         "footer footer footer footer footer";
         grid-gap: 10px;
-        margin-top: 10vh;
+        margin-top: 5vh;
         font-size: 2.5vw;
         }
     main{
