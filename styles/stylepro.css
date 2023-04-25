@@ -13,6 +13,7 @@ body {
 }
 a{
     text-decoration: none;
+    color: gold;
 }
 h1{
     padding-left: 10px;
@@ -60,7 +61,7 @@ header{
 }
 .flex-container{
     display: flex;
-    width: 60vw;
+    width: 70vw;
     margin-right: 15vw;    
 }
 #issue{
@@ -68,6 +69,7 @@ header{
     font-size: 3vw;
     font-weight: bold;
     color: yellow;
+   
 }
 .desktop-navigation{
     position: sticky;
